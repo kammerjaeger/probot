@@ -101,6 +101,12 @@ If you want to run a Probot App against a GitHub Enterprise instance, you'll nee
 GHE_HOST=fake.github-enterprise.com
 ```
 
+If you want to use the integrated web page to setup your app and you are inside a secure network, using the Smee proxy may not be allowed.
+You can disable the automatic setup of Smee during the setup step, with:
+```
+NO_SMEE_SETUP=true
+```
+
 When [using Probot programmatically](./development.md#run-probot-programmatically), set the `baseUrl` option for the [`Probot`](https://probot.github.io/api/latest/classes/probot.html) constructor to the full base Url of the REST API
 
 ```js

@@ -24,7 +24,7 @@ export const setupAppFactory = (
       !(
         process.env.PROJECT_DOMAIN ||
         process.env.WEBHOOK_PROXY_URL ||
-        process.env.NO_SMEE_SETUP === "true"
+        process.env.NO_SMEE_SETUP?.toLowerCase() === "true"
       )
     ) {
       await setup.createWebhookChannel();
